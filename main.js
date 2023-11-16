@@ -9,6 +9,14 @@ const tecla = listaDeTeclas [contador];
 const instrumento = tecla.classList[1];
 const idAudio = '#som_s(instrumento)'; //template string
 
+tecla.onclick = function () {
+    tocaSom(idAudio);
+}
+
+tecla.onkeydown = function () {
+    tecla.classlist.add('ativa');
+}
+
 //enquanto
 while (contador < listaDeTeclas.length ){
 
